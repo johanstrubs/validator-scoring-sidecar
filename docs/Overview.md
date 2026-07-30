@@ -119,6 +119,11 @@ The transaction is paid for and broadcast by a **separate funded relay wallet** 
 so the account that sends the transaction is deliberately *not* your validator
 identity.
 
+Terminology note: the relay wallet just pays commit-reveal transaction fees. It is unrelated to a network relay or *sentry* host fronting a
+validator's public endpoint — that networking concept is covered in the
+validator setup guide:
+https://postfiat.org/validator-setup/#endpoint-visibility-and-your-diversity-score
+
 ## The lifecycle, as local state
 
 The sidecar tracks each round in a local database, advancing it through:
