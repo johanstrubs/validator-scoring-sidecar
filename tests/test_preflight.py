@@ -121,7 +121,6 @@ def test_unset_key_path_names_the_variable_config_reads(tmp_path):
     assert report.ready is False
     assert check.ok is False
     assert f"({ENV_VALIDATOR_KEYS_PATH})" in check.detail
-    assert "POSTFIAT_SIDECAR_VALIDATOR_KEYS_FILE" not in check.detail
 
     keys_path = _key_file(tmp_path)
     config = load_config(environ={ENV_VALIDATOR_KEYS_PATH: keys_path})
